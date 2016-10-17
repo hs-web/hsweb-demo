@@ -53,8 +53,8 @@
 
         <!--
         1、动态数据源支持,如果不引入此依赖,动态数据源将无法使用。
-        2、配置hsweb.dynamic-datasource失效。
-        3、请自行配置数据源 spring.datasource。
+        2、配置application.yml -> hsweb.dynamic-datasource失效。
+        3、请自行配置数据源application.yml -> spring.datasource。
         -->
         <dependency>
             <groupId>org.hsweb</groupId>

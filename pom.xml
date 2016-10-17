@@ -25,6 +25,7 @@
                     <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
             </plugin>
+            <!--spring-boot插件,有了它才能执行 mvn spring-boot:run命令，以及mvn package 打可运行jar包-->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
@@ -43,26 +44,37 @@
         </plugins>
     </build>
     <dependencies>
-
+        <!--druid 数据源-->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
             <version>1.0.26</version>
         </dependency>
 
+        <!--
+        1、动态数据源支持,如果不引入此依赖,动态数据源将无法使用。
+        2、配置hsweb.dynamic-datasource失效。
+        3、请自行配置数据源 spring.datasource。
+        -->
         <dependency>
             <groupId>org.hsweb</groupId>
             <artifactId>hsweb-web-datasource</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.hsweb</groupId>
-            <artifactId>hsweb-web-oauth2-simple</artifactId>
-        </dependency>
+
+        <!--
+        ui模块，目前仅提供了一个ui实现
+        https://github.com/hs-web/hsweb-platform/tree/master/hsweb-platform-ui-miniui
+        -->
         <dependency>
             <groupId>org.hsweb</groupId>
             <artifactId>hsweb-platform-ui-miniui</artifactId>
             <version>${hsweb.version}</version>
         </dependency>
+
+        <!--
+        hsweb 核心依赖
+        https://github.com/hs-web/hsweb-framework
+        -->
         <dependency>
             <groupId>org.hsweb</groupId>
             <artifactId>hsweb-web-controller</artifactId>
@@ -79,9 +91,11 @@
             <groupId>org.hsweb</groupId>
             <artifactId>hsweb-web-websocket</artifactId>
         </dependency>
+
     </dependencies>
 
     <dependencyManagement>
+        <!--统一依赖，有没有发现上面不需要写版本号了-->
         <dependencies>
             <dependency>
                 <groupId>org.hsweb</groupId>

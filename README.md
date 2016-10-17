@@ -33,3 +33,5 @@
 ## 增删改查
 演示中已建了一个测试功能(test),暂无页面
 启动成功登录后,用浏览器打开 `http://localhost:8080/test` 试试
+
+[上报问题](https://github.com/hs-web/hsweb-demo/issues/new)

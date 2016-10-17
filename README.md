@@ -8,7 +8,8 @@
 ## 运行
 **直接运行**
 ```shell
-    $ mvnw spring-boot:run
+    $ ./mvnw spring-boot:run    #linux
+    $ mvnw.cmd spring-boot:run  #windows
 ```
 **IDE**
 导入ide后等待maven依赖下载完成后执行`org.hsweb.demo.Run`

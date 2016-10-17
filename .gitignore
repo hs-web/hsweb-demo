@@ -1,0 +1,24 @@
+**/pom.xml.versionsBackup
+/upload
+**/target/
+**/out/
+bin/
+*.class
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+.idea/
+/nbproject
+*.ipr
+*.iws
+*.iml
+*.db
+*.log
+# Package Files #
+*.jar
+*.war
+*.ear
+*.epoch
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+/data/
+!/.mvn/wrapper/maven-wrapper.jar

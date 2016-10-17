@@ -1,0 +1,33 @@
+#LOGGING
+logging:
+    config: classpath:config/logback.xml
+server:
+    port: 8080
+#文件上传配置
+multipart:
+    enabled: true
+    maxFileSize: 100Mb
+    maxRequestSize: 100Mb
+    location: ./upload
+#spring config
+spring:
+    application:
+        name: ${app.name}
+        version: ${app.version}
+    freemarker :
+        suffix : .ftl
+        request-context-attribute : request
+        expose-request-attributes : true
+    mvc:
+        favicon:
+            enabled: false
+# MyBatis
+mybatis:
+    mapper-locations: classpath:mappers/**/*.xml
+    config: classpath:config/mybatis-config.xml
+hsweb:
+    dynamic-datasource: #动态数据源配置
+          url: jdbc:h2:file:./data/h2db;DB_CLOSE_ON_EXIT=FALSE
+          username: sa
+          password:
+    access-logger: on #开启访问日志

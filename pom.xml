@@ -53,6 +53,7 @@
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
+            <version>1.4.192</version>
         </dependency>
         <!--
         1、动态数据源支持,如果不引入此依赖,动态数据源将无法使用。

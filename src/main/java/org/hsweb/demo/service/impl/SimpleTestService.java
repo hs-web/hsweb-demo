@@ -1,6 +1,7 @@
 package org.hsweb.demo.service.impl;
 
 import org.hsweb.demo.bean.test.TestPo;
+import org.hsweb.demo.bean.test.TestPo.Property;
 import org.hsweb.demo.dao.test.TestDao;
 import org.hsweb.demo.service.TestService;
 import org.hsweb.web.bean.common.QueryParam;
@@ -27,12 +28,11 @@ public class SimpleTestService extends AbstractServiceImpl<TestPo, String> imple
     /**
      * 根据名称查询
      *
-     * @see QueryParam 还支持丰富的查询条件,如 param.where("name$like","")
-     * @see org.hsweb.ezorm.param.TermType
+     * @see org.hsweb.ezorm.core.dsl.Query
      */
     @Override
     public List<TestPo> selectByName(String name) {
-        return testDao.select(QueryParam.build().where("name", name).noPaging());
+        return createQuery().where(Property.name, name).listNoPaging();
     }
 
 }

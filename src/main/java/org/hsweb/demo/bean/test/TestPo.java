@@ -39,4 +39,10 @@ public class TestPo extends GenericPo<String> {
     public void setCreateDate(Date createDate) {
         this.createDate = createDate;
     }
+
+    public interface Property {
+        String name       = "name";
+        String age        = "age";
+        String createDate = "createDate";
+    }
 }

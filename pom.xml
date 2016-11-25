@@ -11,7 +11,7 @@
     <properties>
         <project.build.jdk>1.8</project.build.jdk>
         <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
-        <hsweb.version>2.1-SNAPSHOT</hsweb.version>
+        <hsweb.version>2.2-SNAPSHOT</hsweb.version>
     </properties>
     <build>
         <plugins>
@@ -50,7 +50,10 @@
             <artifactId>druid</artifactId>
             <version>1.0.26</version>
         </dependency>
-
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+        </dependency>
         <!--
         1、动态数据源支持,如果不引入此依赖,动态数据源将无法使用。
         2、配置application.yml -> hsweb.dynamic-datasource失效。
@@ -110,7 +113,7 @@
     <repositories>
         <repository>
             <id>hsweb-nexus</id>
-            <name>Nexus Release Repository</name>
+            <name>Nexus Repository</name>
             <url>http://nexus.hsweb.me/content/groups/public/</url>
             <snapshots>
                 <enabled>true</enabled>

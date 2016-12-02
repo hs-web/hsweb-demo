@@ -29,7 +29,6 @@ public class TestController extends GenericController<TestPo, String> {
     }
 
     @RequestMapping(value = "/name/{name}", method = RequestMethod.GET)
-    @Authorize
     public ResponseMessage getByName(@PathVariable("name") String name) {
         return ResponseMessage.ok(testService.selectByName(name));
     }

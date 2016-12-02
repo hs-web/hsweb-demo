@@ -11,28 +11,6 @@ multipart:
     location: ./upload
 #spring config
 spring:
-    application:
-        name: ${app.name}
-        version: ${app.version}
-#    datasource:  #使用hsweb动态数据源无需配置此项
-#        name: core
-#        url: ${jdbc.url}
-#        username: ${jdbc.username}
-#        password: ${jdbc.password}
-#        type: com.alibaba.druid.pool.DruidDataSource
-#        filters: stat
-#        maxActive: 20
-#        initialSize: 1
-#        maxWait: 60000
-#        minIdle: 1
-#        timeBetweenEvictionRunsMillis: 60000
-#        minEvictableIdleTimeMillis: 300000
-#        validationQuery: select 'x'
-#        testWhileIdle: true
-#        testOnBorrow: false
-#        testOnReturn: false
-#        poolPreparedStatements: true
-#        maxOpenPreparedStatements: 20
     freemarker :
         suffix : .ftl
         request-context-attribute : request
@@ -40,13 +18,25 @@ spring:
     mvc:
         favicon:
             enabled: false
+    aop:
+      auto: true
 # MyBatis
 mybatis:
     mapper-locations: classpath:mappers/**/*.xml
     config: classpath:config/mybatis-config.xml
+#    dynamic-datasource: true  #启用mybatis动态数据源
 hsweb:
+    app:
+      name: hsweb demo
+      version: 1.0
+      comment: 演示项目
     dynamic-datasource: #动态数据源配置
           url: jdbc:h2:file:./data/h2db;DB_CLOSE_ON_EXIT=FALSE
           username: sa
           password:
+          icatch:
+            max-actives: 100
+            output-dir: ./data/atomikos
+            log_base_dir: ./data/atomikos
+            default-jta-timeout: 300000
     access-logger: on #开启访问日志

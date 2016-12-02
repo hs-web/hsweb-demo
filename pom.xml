@@ -81,19 +81,12 @@
         -->
         <dependency>
             <groupId>org.hsweb</groupId>
-            <artifactId>hsweb-web-controller</artifactId>
+            <artifactId>hsweb-web-starter</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.hsweb</groupId>
-            <artifactId>hsweb-web-service-simple</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.hsweb</groupId>
-            <artifactId>hsweb-web-dao-mybatis</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.hsweb</groupId>
-            <artifactId>hsweb-web-websocket</artifactId>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aspects</artifactId>
+            <version>4.2.7.RELEASE</version>
         </dependency>
 
     </dependencies>

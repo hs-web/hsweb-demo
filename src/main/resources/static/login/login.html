@@ -73,7 +73,7 @@
             isLogin = true;
             Request.post("login", {username: uname, password: pwd}, function (e) {
                 if (e.success) {
-                    $(document.body).fadeOut(1000, function () {
+                    $(".login-form").fadeOut(1000, function () {
                         window.location.href = "/";
                     });
                 } else {

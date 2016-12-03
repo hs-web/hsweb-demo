@@ -5,7 +5,7 @@ multipart:
     enabled: true
     maxFileSize: 100Mb
     maxRequestSize: 100Mb
-    location: ./upload
+#    location: ./upload
 #spring config
 spring:
     profiles:

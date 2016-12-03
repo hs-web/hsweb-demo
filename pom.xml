@@ -30,6 +30,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>1.3.7.RELEASE</version>
                 <configuration>
                     <mainClass>org.hsweb.demo.Run</mainClass>
                     <layout>ZIP</layout>

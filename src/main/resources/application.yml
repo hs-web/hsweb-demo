@@ -1,6 +1,3 @@
-#LOGGING
-logging:
-    config: classpath:config/logback.xml
 server:
     port: 8080
 #文件上传配置
@@ -11,6 +8,8 @@ multipart:
     location: ./upload
 #spring config
 spring:
+    profiles:
+       active: dev
     freemarker :
         suffix : .ftl
         request-context-attribute : request
@@ -30,13 +29,3 @@ hsweb:
       name: hsweb demo
       version: 1.0
       comment: 演示项目
-    dynamic-datasource: #动态数据源配置
-          url: jdbc:h2:file:./data/h2db;DB_CLOSE_ON_EXIT=FALSE
-          username: sa
-          password:
-          icatch:
-            max-actives: 100
-            output-dir: ./data/atomikos
-            log_base_dir: ./data/atomikos
-            default-jta-timeout: 300000
-    access-logger: on #开启访问日志

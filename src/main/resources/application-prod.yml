@@ -1,0 +1,14 @@
+#LOGGING
+logging:
+    config: classpath:config/logback-prod.xml
+hsweb:
+    dynamic-datasource: #动态数据源配置
+          url: jdbc:h2:file:./data/h2db;DB_CLOSE_ON_EXIT=FALSE
+          username: sa
+          password:
+          icatch:
+            max-actives: 100
+            output-dir: ./data/atomikos
+            log_base_dir: ./data/atomikos
+            default-jta-timeout: 300000
+    access-logger: on #开启访问日志

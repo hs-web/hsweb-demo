@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.index-search{
+    border-radius:10px;
+    border: 0px;
+    width: 200px;
+    height: 22px;
+    font-size: 16px;
+}
+
+.font-2x {
+    font-size: 17px;;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    cursor:pointer;
+}
+
+.top-menu a:hover {
+    color: rgb(1, 150, 221);
+}
+
+.main-menu {
+    width: 95%;
+    margin: auto;
+    list-style: none;
+    color: white;
+    overflow: hidden;
+}
+
+.main-menu span {
+    float: left;
+    height: 48px;
+    font-size: 18px;
+    line-height: 48px;
+    text-align: center;
+
+}
+.main-menu .split{
+    width: 1px;
+    background: url(../images/menumain_line.gif) no-repeat right;
+}
+
+.main-menu .main-menu-action {
+    min-width: 120px;
+}
+
+.main-menu-hover{
+    background-color: white;
+    cursor: pointer;
+    color: rgb(0, 53, 133);
+}
+.main-menu .main-menu-action:hover {
+    background-color: white;
+    cursor: pointer;
+    color: rgb(0, 53, 133);
+}
+
+.child-menu {
+    margin: auto;
+    list-style: none;
+    color: dimgrey;
+}
+
+.child-menu .split{
+    font-size: 12px;
+}
+
+/*.child-menu li {*/
+    /*height: 25px;*/
+    /*font-size: 15px;*/
+    /*line-height: 25px;*/
+    /*text-align: center;*/
+/*}*/
+
+.child-menu .child-menu-action {
+    width: 100px;
+    margin: auto;
+    font-size: 14px;
+}
+
+.child-menu .child-menu-action:hover {
+    color: blue;
+    cursor: pointer;
+    color: rgb(0, 53, 133);
+}
+.hide{
+    display: none;
+}

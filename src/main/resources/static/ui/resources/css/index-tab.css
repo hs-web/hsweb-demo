@@ -1,0 +1,24 @@
+.container {
+    padding: 30px;
+}
+
+.container .mini-panel {
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.split {
+    height: 1px;
+    border: none;
+    border-top: 1px solid #adbbbe;
+}
+
+.panel-table {
+    font-size: 15px;
+}
+
+.p-href {
+    color: rgb(5, 102, 183);
+    cursor: pointer;
+    text-decoration: none;
+}

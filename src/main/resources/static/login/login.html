@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>登录系统</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="application/x-javascript"> addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    } </script>
+    <meta name="keywords" content="企业后台管理,后台管理框架,后台框架模板,java,spring,spring-boot"/>
+    <link href="css/style.css" rel='stylesheet' type='text/css'/>
+    <!--webfonts-->
+    <!--<link href='http://fonts.useso.com/css?family=PT+Sans:400,700,400italic,700italic|Oswald:400,300,700' rel='stylesheet' type='text/css'>-->
+    <!--<link href='http://fonts.useso.com/css?family=Exo+2' rel='stylesheet' type='text/css'>-->
+    <!--//webfonts-->
+    <script src="/ui/plugins/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/ui/plugins/ajax/Request.js" type="text/javascript"></script>
+</head>
+<body>
+<!--SIGN UP-->
+<h1>hsweb 企业后台管理系统</h1>
+<div class="login-form">
+    <div class="close"></div>
+    <div class="head-info">
+        <label class="lbl-1"></label>
+        <label class="lbl-2"></label>
+        <label class="lbl-3"></label>
+    </div>
+    <div class="clear"></div>
+    <div class="avtar">
+        <img src="images/avtar.png"/>
+    </div>
+    <div>
+        <input type="text" class="text" placeholder="用户名">
+        <input type="password" class="pwd" placeholder="密码">
+    </div>
+    <div class="signin">
+        <input class="login" type="submit" value="登录系统">
+    </div>
+</div>
+<div class="copy-rights">
+</div>
+
+</body>
+</html>
+<script type="text/javascript">
+    Request.BASH_PATH = "/";
+    var isLogin = false;
+    $(function () {
+        $(".close").unbind("click");
+        $(".close").on("click", function () {
+            $(".login-form").fadeOut(1000, function () {
+                window.location.href = "http://www.hsweb.me"
+            });
+        });
+        $(".login").on("click", function () {
+            if (isLogin) {
+                alert("正在登录...");
+                return;
+            }
+            var uname = $(".text").val();
+            var pwd = $(".pwd").val();
+            if ($.trim(uname) == "") {
+                $(".text").focus();
+                return;
+            }
+            if ($.trim(pwd) == "") {
+                $(".pwd").focus();
+                return;
+            }
+            isLogin = true;
+            Request.post("login", {username: uname, password: pwd}, function (e) {
+                if (e.success) {
+                    $(document.body).fadeOut(1000, function () {
+                        window.location.href = "/";
+                    });
+                } else {
+                    alert(e.message);
+                }
+                isLogin = false;
+            }, false);
+        })
+    })
+</script>

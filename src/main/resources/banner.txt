@@ -1,0 +1,8 @@
+${AnsiColor.RED}         _                      _
+        | |__  _____      _____| |__
+        | '_ \/ __\ \ /\ / / _ \ '_ \
+        | | | \__ \\ V  V /  __/ |_) |
+        |_| |_|___/ \_/\_/ \___|_.__/
+${AnsiColor.YELLOW}--------------------start-----------------------
+${AnsiColor.YELLOW}         :: ${AnsiColor.GREEN}Running ${AnsiColor.RED}${hsweb.app.name} ${AnsiColor.YELLOW}(${hsweb.app.version})
+${AnsiColor.YELLOW}------------------------------------------------${AnsiColor.WHITE}

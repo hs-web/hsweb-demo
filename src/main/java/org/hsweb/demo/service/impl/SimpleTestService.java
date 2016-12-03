@@ -6,9 +6,11 @@ import org.hsweb.demo.dao.test.TestDao;
 import org.hsweb.demo.service.TestService;
 import org.hsweb.ezorm.rdb.executor.SqlExecutor;
 import org.hsweb.web.core.datasource.DynamicDataSource;
+import org.hsweb.web.datasource.dynamic.UseDataSource;
 import org.hsweb.web.service.datasource.DataSourceService;
 import org.hsweb.web.service.impl.AbstractServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.lang.UsesJava7;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -55,6 +57,7 @@ public class SimpleTestService extends AbstractServiceImpl<TestPo, String> imple
      */
     @Override
     @Transactional
+    @UseDataSource("test")
     public List<TestPo> selectByName(String name) {
         try {
             DynamicDataSource.use("test");

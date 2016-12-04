@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>hsweb 企业后台管理系统基础框架</title>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
 <@global.importMiniui/>
 <@global.importFontIcon/>

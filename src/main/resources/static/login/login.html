@@ -55,7 +55,7 @@
                 window.location.href = "http://www.hsweb.me"
             });
         });
-        $(".login").on("click", function () {
+        function login() {
             if (isLogin) {
                 alert("正在登录...");
                 return;
@@ -81,6 +81,18 @@
                 }
                 isLogin = false;
             }, false);
-        })
+        }
+
+        $(".login").on("click", login);
+        $(".uname").keydown(function (event) {
+            if (event.keyCode == 13) {
+                $(".pwd").focus();
+            }
+        });
+        $(".pwd").keydown(function (event) {
+            if (event.keyCode == 13) {
+                login();
+            }
+        });
     })
 </script>

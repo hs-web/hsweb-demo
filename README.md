@@ -32,6 +32,6 @@
 
 ## 增删改查
 演示中已建了一个测试功能(test),暂无页面
-启动成功登录后,用浏览器打开 `http://localhost:8080/` 试试
+启动成功登录后,用浏览器打开 `http://localhost:8080/` 
 帐号:admin 密码:admin
 [上报问题](https://github.com/hs-web/hsweb-demo/issues/new)

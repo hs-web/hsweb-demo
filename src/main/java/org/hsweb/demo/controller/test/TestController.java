@@ -4,6 +4,8 @@ import org.hsweb.demo.bean.test.TestPo;
 import org.hsweb.demo.service.TestService;
 import org.hsweb.web.controller.GenericController;
 import org.hsweb.web.core.authorize.annotation.Authorize;
+import org.hsweb.web.core.authorize.validator.SimpleAuthorizeValidator;
+import org.hsweb.web.core.logger.annotation.AccessLogger;
 import org.hsweb.web.core.message.ResponseMessage;
 import org.hsweb.web.service.GenericService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +19,8 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/test")
-@Authorize(module = "user")
+@Authorize(module = "test")
+@AccessLogger("测试")
 public class TestController extends GenericController<TestPo, String> {
 
     @Autowired
@@ -29,6 +32,8 @@ public class TestController extends GenericController<TestPo, String> {
     }
 
     @RequestMapping(value = "/name/{name}", method = RequestMethod.GET)
+    @Authorize(api = true) //试试oauth2方式调用
+    @AccessLogger("按名称查询")
     public ResponseMessage getByName(@PathVariable("name") String name) {
         return ResponseMessage.ok(testService.selectByName(name));
     }

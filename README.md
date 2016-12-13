@@ -23,7 +23,7 @@
 ----------resources
 ---------------config                           #配置目录(logback和mybatis配置文件)
 ---------------mappers                          #mybatis mapper配置文件
----------------system.install.sql               #系统首次启动执行的sql
+---------------scripts.initialize               #系统初始化脚本
 ---------------templates                        #模板文件(freemarker)
 ---------------static                           #静态文件目录
 ---------------application.yml                  #应用主配置,数据源啥的都在这里
@@ -32,6 +32,6 @@
 
 ## 增删改查
 演示中已建了一个测试功能(test),暂无页面
-启动成功登录后,用浏览器打开 `http://localhost:8080/test` 试试
-
+启动成功登录后,用浏览器打开 `http://localhost:8080/` 试试
+帐号:admin 密码:admin
 [上报问题](https://github.com/hs-web/hsweb-demo/issues/new)

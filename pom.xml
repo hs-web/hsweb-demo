@@ -11,7 +11,7 @@
     <properties>
         <project.build.jdk>1.8</project.build.jdk>
         <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
-        <hsweb.version>2.2-SNAPSHOT</hsweb.version>
+        <hsweb.version>2.2</hsweb.version>
     </properties>
     <build>
         <finalName>${project.artifactId}</finalName>
@@ -80,7 +80,7 @@
         <dependency>
             <groupId>org.hsweb</groupId>
             <artifactId>hsweb-platform-ui-miniui</artifactId>
-            <version>${hsweb.version}</version>
+            <version>2.2-SNAPSHOT</version>
         </dependency>
 
         <!--

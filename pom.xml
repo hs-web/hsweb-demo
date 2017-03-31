@@ -125,4 +125,14 @@
             </snapshots>
         </repository>
     </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>hsweb-nexus</id>
+            <name>Nexus Repository</name>
+            <url>http://nexus.hsweb.me/content/groups/public/</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
 </project>

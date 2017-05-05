@@ -25,37 +25,37 @@
 </head>
 <body>
 <div id="layout1" class="mini-layout" style="width:100%;height:100%;">
-        <div class="header" region="north" height="75" showSplit="false" showHeader="false" splitSize="6">
-            <div id="headerLayout" style="width:100%;height:73px;">
-                <div class="header" style="background-color:rgb(1,104,183) "  region="north" height="72" showSplit="false" splitSize="4" showHeader="false">
-                    <div style="width:100%;height:70px; ">
-                        <h1 style="margin:0;padding:18px;font-size: 30px; cursor:default;font-family:微软雅黑,黑体,宋体;color: white;">
-                            hsweb 企业后台管理系统
-                        </h1>
-                        <div class="top-menu" style="position:absolute;top:25px;right:10px;color: white;font-size: 15px;">
-                            <a class="link" onclick=" window.onbeforeunload=function(){};window.location.reload()">
-                                <i class="fa fa-home"></i>首页
-                            </a>
-                            |
-                            <a class="link" onclick="showTips('建设中..')">
-                                <i class="fa fa-book"></i>
-                                帮助
-                            </a>
-                            |
-                            <a class="link" onclick="settings()">
-                                <i class="fa fa-gear"></i>
-                                设置
-                            </a>
-                            |
-                            <a class="link" onclick="exit()">
-                                <i class="fa fa-sign-out"></i>
-                                注销
-                            </a>
-                        </div>
+    <div class="header" region="north" height="75" showSplit="false" showHeader="false" splitSize="6">
+        <div id="headerLayout" style="width:100%;height:73px;">
+            <div class="header" style="background-color:rgb(1,104,183) " region="north" height="72" showSplit="false" splitSize="4" showHeader="false">
+                <div style="width:100%;height:70px; ">
+                    <h1 style="margin:0;padding:18px;font-size: 30px; cursor:default;font-family:微软雅黑,黑体,宋体;color: white;">
+                        hsweb 企业后台管理系统
+                    </h1>
+                    <div class="top-menu" style="position:absolute;top:25px;right:10px;color: white;font-size: 15px;">
+                        <a class="link" onclick=" window.onbeforeunload=function(){};window.location.reload()">
+                            <i class="fa fa-home"></i>首页
+                        </a>
+                        |
+                        <a class="link" onclick="showTips('建设中..')">
+                            <i class="fa fa-book"></i>
+                            帮助
+                        </a>
+                        |
+                        <a class="link" onclick="settings()">
+                            <i class="fa fa-gear"></i>
+                            设置
+                        </a>
+                        |
+                        <a class="link" onclick="exit()">
+                            <i class="fa fa-sign-out"></i>
+                            注销
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     <div title="south" region="south" showSplit="false" showHeader="false" height="30">
         <div style="line-height:28px;text-align:center;cursor:default;color: white; background-color:rgb(1,121,183)">
             你好,&nbsp;${(user.name)!'游客'}&nbsp;${.now?string("yyyy年MM月dd日 E")} 当前在线人数:<span class="online-total">-</span>人
@@ -91,6 +91,12 @@
         if (node) {
             tree.selectNode(node[0]);
             showTab(node[0]);
+        }
+    }
+    function showTablById(id) {
+        var node = tree.getNodesByValue(id);
+        if (node) {
+            showTab(node);
         }
     }
     function nodeselect(e) {

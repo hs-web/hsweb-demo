@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 public class IndexController {
     @RequestMapping(value = {"/", "/index.html"})
     @Authorize
-    public ModelAndView index(HttpServletRequest request) {
+    public ModelAndView index(HttpServletRequest request) throws  Exception {
         ModelAndView view = new ModelAndView("admin/index");
         view.addObject("absPath", WebUtil.getBasePath(request));
         return view;

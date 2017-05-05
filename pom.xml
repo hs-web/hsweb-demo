@@ -11,7 +11,7 @@
     <properties>
         <project.build.jdk>1.8</project.build.jdk>
         <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
-        <hsweb.version>2.2</hsweb.version>
+        <hsweb.version>2.2.2-SNAPSHOT</hsweb.version>
     </properties>
     <build>
         <finalName>${project.artifactId}</finalName>
@@ -51,6 +51,20 @@
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
             <version>1.0.26</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hsweb</groupId>
+            <artifactId>hsweb-expands-request</artifactId>
+        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.microsoft.sqlserver</groupId>-->
+            <!--<artifactId>sqljdbc4</artifactId>-->
+            <!--<version>4.0</version>-->
+        <!--</dependency>-->
+        <dependency>
+            <groupId>net.sourceforge.jtds</groupId>
+            <artifactId>jtds</artifactId>
+            <version>1.3.1</version>
         </dependency>
         <dependency>
             <groupId>com.h2database</groupId>
@@ -100,10 +114,20 @@
             <groupId>org.hsweb</groupId>
             <artifactId>hsweb-web-datasource</artifactId>
         </dependency>
+
+        <!--<dependency>-->
+        <!--<groupId>org.springframework.boot</groupId>-->
+        <!--<artifactId>spring-boot-starter-redis</artifactId>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+        <!--<groupId>org.springframework.session</groupId>-->
+        <!--<artifactId>spring-session-data-redis</artifactId>-->
+        <!--</dependency>-->
     </dependencies>
 
     <dependencyManagement>
-        <!--统一依赖，有没有发现上面不需要写版本号了-->
+        <!--统一管理依赖-->
         <dependencies>
             <dependency>
                 <groupId>org.hsweb</groupId>

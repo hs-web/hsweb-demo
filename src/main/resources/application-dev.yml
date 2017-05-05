@@ -3,7 +3,10 @@ logging:
     config: classpath:config/logback.xml
 hsweb:
     dynamic-datasource: #动态数据源配置
+          #h2
           url: jdbc:h2:file:./data/h2db;DB_CLOSE_ON_EXIT=FALSE
+          #sqlserver
+#          url: jdbc:jtds:sqlserver://192.168.0.141:1433;DatabaseName=hsweb;SelectMethod=cursor;integratedSecurity=false;
           username: sa
           password:
           icatch:
@@ -11,4 +14,10 @@ hsweb:
             output-dir: ./data/atomikos
             log_base_dir: ./data/atomikos
             default-jta-timeout: 300000
-    access-logger: on #开启访问日志
+    access-logger: on
+spring:
+  redis:
+    host: localhost
+scheduler:
+  properties:
+    org.quartz.jobStore.selectWithLockSQL: SELECT * FROM {0}LOCKS UPDLOCK WHERE LOCK_NAME = ?

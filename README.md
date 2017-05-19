@@ -27,11 +27,14 @@
 ---------------templates                        #模板文件(freemarker)
 ---------------static                           #静态文件目录
 ---------------application.yml                  #应用主配置,数据源啥的都在这里
----------------transactions.properties          #动态数据源jta所需配置(自行搜索atomikos)
 ```
 
-## 增删改查
-演示中已建了一个测试功能(test),暂无页面
+## 访问
 启动成功登录后,用浏览器打开 `http://localhost:8080/` 
 帐号:admin 密码:admin
 [上报问题](https://github.com/hs-web/hsweb-demo/issues/new)
+
+# 注意
+启动日志提示sigar-amd64-winnt.dll相关错误,这是系统监控需要的库,不引入不影响程序运行.
+要使用系统监控功能,请自行将 sigar-amd64-winnt.dll 放入system32 目录或者libsigar-amd64-linux.so  /usr/lib 目录.
+[下载地址](https://github.com/hs-web/hsweb-platform/blob/master/lib/sigar)

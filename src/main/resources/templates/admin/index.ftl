@@ -62,7 +62,7 @@
         </div>
     </div>
     <div showHeader="true" title="导航" region="west" width="180" height="100%" maxWidth="250" minWidth="100">
-        <div id="leftTree" class="mini-tree" url="<@global.api "userModule" />"
+        <div id="leftTree" class="mini-tree" url="<@global.api "userModule" />" style="height: 100%"
              expandOnLoad="true" resultAsTree="false" ajaxOptions="{type:'GET'}" showTreeIcon="true" iconField="icon"
              onnodeclick="nodeselect" idField="id" parentField="parentId" textField="name" borderStyle="border:0">
         </div>
